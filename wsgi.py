@@ -1,7 +1,12 @@
-import time
+import time, datetime
 from flask import Flask, render_template
 
 app = Flask(__name__)
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    return 'Log into the page'
+
 
 @app.route('/')
 def index():
@@ -13,7 +18,3 @@ def index():
                     content=f'Hello World - {timestamp}',
                     list = fruits
                     )
-
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    return 'Log into the page'
