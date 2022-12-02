@@ -1,6 +1,8 @@
 import time, datetime
 from flask import Flask, render_template
 
+#Must install flask
+
 app = Flask(__name__)
 
 @app.route('/login', methods=['GET', 'POST'])
